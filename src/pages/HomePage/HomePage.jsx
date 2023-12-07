@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import SearchInput from './searchInput/searchInput';
 import { fetchPopular, fetchTrending } from '../../features/home/homeAPI';
 import ItemList from '../../components/ItemList/ItemList';
 import ItemCard from '../../components/ItemCard/ItemCard';
@@ -8,6 +7,7 @@ import { ToggleButton, ToggleButtonGroup, Typography, Container, Box } from '@mu
 import { SearchPreviewContainer } from './styles';
 import usePlatziMovies from '../../hooks/usePlatziMovies';
 import { useInView } from 'react-intersection-observer';
+import SearchBar from './SearchBar/SearchBar';
 
 const HomePage = () => {
   const { favoriteMovies , favoriteTvSeries, addFavoriteTvSerie, addFavoriteMovie, 
@@ -83,7 +83,7 @@ const HomePage = () => {
         <Typography component={"h3"} sx={{color: "#EEEAF2", fontSize: {xs: "24px", md: "32px"}, fontWeight: "bold"}}>
           Millions of movies, TV shows to discover. Explore now.
         </Typography>
-        <SearchInput/>
+        <SearchBar/>
       </Container>
     </SearchPreviewContainer>
     <Container ref={refTrending} component={"section"} maxWidth="lg" sx={{mt: "32px", mb: "32px"}}>

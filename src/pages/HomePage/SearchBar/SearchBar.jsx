@@ -4,7 +4,7 @@ import { SearchBarContainer, SearchForm } from './styles'
 import { useNavigate } from 'react-router-dom';
 
 
-const SearchInput = () => {
+const SearchBar = () => {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState("");
 
@@ -41,4 +41,4 @@ const SearchInput = () => {
   )
 }
 
-export default SearchInput
+export default SearchBar
