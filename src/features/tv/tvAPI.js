@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import apiClient from "../../api/apiClient";
+import apiClient from "../../API/apiClient";
 
 export const fetchTvSeries = createAsyncThunk("tv/fetchTvSeries", async(arg) => {
   let { params } = arg; 
